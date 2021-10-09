@@ -1,0 +1,107 @@
+.presentation {
+  background-color: $primary_color;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  @include flexContainer(space-between, center, row);
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  &__container {
+    flex-basis: 48%;
+    padding-left: 3.125rem;
+  }
+
+  &__heading {
+    color: $text_color;
+    font: {
+      family: Times, "Times New Roman";
+      size: 9rem;
+      weight: 400;
+    }
+    margin: {
+      top: 16/16 + rem;
+      bottom: 16/16 + rem;
+    }
+  }
+
+  &__description {
+    color: $text_color;
+    font: {
+      family: "poppinslight";
+      size: $fontMedium;
+    }
+    line-height: 2;
+    padding-right: 100/16 + rem;
+  }
+
+  &__images {
+    position: relative;
+    flex-basis: 48%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 200/16 + rem;
+    }
+
+    div {
+      position: absolute;
+      display: inline-block;
+    }
+
+    .img1 {
+      transform: rotate(-10deg);
+      width: 400/16 + rem;
+      height: 600/16 + rem;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 200/16 + rem;
+        position: absolute;
+        right: -50/16 + rem;
+        bottom: -50/16 + rem;
+        background: $background_gray;
+        z-index: -1;
+      }
+    }
+
+    .img2 {
+      transform: rotate(10deg);
+      width: 400/16 + rem;
+      height: 500/16 + rem;
+      right: -60/16 + rem;
+      bottom: 100/16 + rem;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 200/16 + rem;
+        position: absolute;
+        right: -50/16 + rem;
+        bottom: -50/16 + rem;
+        background: $background_gray;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__buy {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font: {
+      family: "poppinslight";
+      size: $fontLarge;
+    }
+    color: $secondary_color;
+    text-decoration: none;
+
+    span {
+      padding: 10/16 + rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+/*===========================
+====== GLOBAL STYLES ========
+===========================*/
+
+// Visibility
+.hide-mobile {
+  // Hide for mobile and tablet devices
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+  
+.hide-desktop {
+ // Hide for desktop
+ @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+body {
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
