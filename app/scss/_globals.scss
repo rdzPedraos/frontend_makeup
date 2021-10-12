@@ -17,7 +17,18 @@
   }
 }
 
+.size-wrapper {
+  max-width: 1920/16 + rem;
+}
+
+.flex-wrapper {
+  @include flexContainer(center, center, column);
+}
+
 body {
+
+  background-color: $primary_color;
+
   &.no-scroll {
     overflow: hidden;
   }

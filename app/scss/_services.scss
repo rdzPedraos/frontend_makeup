@@ -1,9 +1,9 @@
-.container_productos{
+.container_services{
     background: $primary_color_lighter_variant;
     font-family: 'linotte-regular';
     height: calc(100vh - 100px);
-    overflow: hidden;
-
+    width: 100%;
+    overflow: hidden;   
     padding-top: 70px;
     color: $text_color;
 
