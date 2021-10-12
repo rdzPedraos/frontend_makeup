@@ -8,7 +8,7 @@ menuIcon.addEventListener("click", function () {
   header.classList.toggle("enabled");
 });
 
-$('.header__links a').click( ()=> {
+$(".header__links a").click(() => {
   body.classList.toggle("no-scroll");
   header.classList.toggle("enabled");
 });
