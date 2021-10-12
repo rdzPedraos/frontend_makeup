@@ -8,29 +8,9 @@
     
     <link rel="stylesheet" href="normalize/normalize.css">
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="../assets/icons/css/all.css">
-
+    <link rel="stylesheet" href="../assets/icons/css/all.css" />
     <link rel="stylesheet" href="css/main.css">
-    
-<body class="flex-wrapper">
-    <header class="header size-wrapper">
-        <nav class="header__nav">
-          <div class="header__logo">True Beauty.</div>
-  
-          <div class="header__links hide-mobile">
-            <a href="#">Acerca de nosotros</a>
-            <a href="services.html">Servicios</a>
-            <a href="contact_us.html">Contáctanos</a>
-          </div>
-  
-          <a href="#" class="header__mobile-menu hide-desktop" id="headerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-        </nav>
-    </header>
-
+<body>
     <main>
         <div class="container_contact_us">
             <div class="main">
@@ -104,8 +84,20 @@
 
     <!-- carrusel -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/contact_us.js"></script>
+    <script>
+        const btn_google = $('#btn_google');
+        const btn_form = $('#btn_form')
+
+        btn_google.click( ()=>{
+            $('.show-value .value_googlemaps').show();
+            $('.show-value .value_form').hide();
+        });
+
+        btn_form.click( ()=>{
+            $('.show-value .value_googlemaps').hide();
+            $('.show-value .value_form').show();
+        });
+    </script>
 </body>
 
 </html>

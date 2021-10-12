@@ -9,6 +9,7 @@
     background-color: $primary_color;
   
     &__logo {
+      cursor: pointer;
       font: {
         family: "linotte-light";
         size: 48/16 + rem;
@@ -141,4 +142,3 @@
       }
     }
   }
-  
