@@ -1,0 +1,95 @@
+.about {
+  @include flexContainer(center, center, column);
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../assets/img/about_bg.jpg) no-repeat center/cover;
+
+  &__heading {
+    padding: 30/16 + rem;
+    font: {
+      family: "poppinsbold";
+      size: 40/16 + rem;
+    }
+    color: $white;
+    max-width: 600/16 + rem;
+    text-align: center;
+  }
+}
+
+.mission-vision {
+  margin: {
+    top: 80/16 + rem;
+  }
+  padding: 50/16 + rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  column-gap: 100/16 + rem;
+
+  > div {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    font: {
+      family: "poppinsbold";
+      size: 35/16 + rem;
+    }
+  }
+
+  p {
+    font: {
+      family: "poppinslight";
+    }
+    line-height: 1.5;
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  column-gap: 30/16 + rem;
+  place-items: center;
+  background-color: $primary_color;
+
+  margin: {
+    top: 80/16 + rem;
+  }
+  padding: 50/16 + rem;
+
+  h2 {
+    font: {
+      family: "poppinsbold";
+      size: 40/16 + rem;
+    }
+  }
+
+  &__description {
+    p {
+      font-family: "poppinslight";
+      line-height: 1.5;
+    }
+  }
+
+  &__members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30/16 + rem;
+
+    img {
+      border-radius: 10/16 + rem;
+      max-width: 450/16 + rem;
+    }
+
+    .member1 {
+      grid-row: 1/3;
+      align-self: center;
+    }
+  }
+}

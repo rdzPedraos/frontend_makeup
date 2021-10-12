@@ -9,10 +9,10 @@
     display: none;
   }
 }
-  
+
 .hide-desktop {
- // Hide for desktop
- @include breakpoint-up(large) {
+  // Hide for desktop
+  @include breakpoint-up(large) {
     display: none;
   }
 }
@@ -26,8 +26,8 @@
 }
 
 body {
-
   background-color: $primary_color;
+  overflow-x: hidden;
 
   &.no-scroll {
     overflow: hidden;

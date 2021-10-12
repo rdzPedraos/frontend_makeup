@@ -32,6 +32,7 @@
 
 body {
   background-color: #f3f4f1;
+  overflow-x: hidden;
 }
 
 body.no-scroll {
@@ -466,7 +467,7 @@ body.no-scroll {
 
 main {
   width: 100%;
-  background: #1c3272;
+  background: white;
 }
 
 .container_contact_us {
@@ -474,7 +475,7 @@ main {
   z-index: 2;
   min-height: 100vh;
   padding: 70px 0;
-  font-family: 'linotte-regular';
+  font-family: "linotte-regular";
   color: white;
 }
 
@@ -486,7 +487,7 @@ main {
 .container_contact_us .main h2 {
   margin: 0;
   text-align: center;
-  font-family: 'poppinsbold';
+  font-family: "poppinsbold";
   letter-spacing: 5px;
 }
 
@@ -505,7 +506,7 @@ main {
 .container_contact_us .main .icons .icon-i {
   width: 100%;
   padding: 10px;
-  transition: background .2s;
+  transition: background 0.2s;
   border-radius: 20px;
   text-align: center;
 }
@@ -594,7 +595,8 @@ main {
   margin-bottom: 10px;
 }
 
-.main .show-value .value_form .field input, .main .show-value .value_form .field textarea {
+.main .show-value .value_form .field input,
+.main .show-value .value_form .field textarea {
   width: 100%;
   height: calc(100% - 53px);
   font-size: 20px;
@@ -604,17 +606,20 @@ main {
   padding: 10px 30px 10px 50px;
 }
 
-.main .show-value .value_form .field input:focus-visible, .main .show-value .value_form .field textarea:focus-visible {
+.main .show-value .value_form .field input:focus-visible,
+.main .show-value .value_form .field textarea:focus-visible {
   outline: 2px solid #5e79c3;
   color: #1c3272;
   background: transparent;
 }
 
-.main .show-value .value_form .field input:focus-visible ~ i, .main .show-value .value_form .field textarea:focus-visible ~ i {
+.main .show-value .value_form .field input:focus-visible ~ i,
+.main .show-value .value_form .field textarea:focus-visible ~ i {
   color: #5e79c3;
 }
 
-.main .show-value .value_form .field input:hover, .main .show-value .value_form .field textarea:hover {
+.main .show-value .value_form .field input:hover,
+.main .show-value .value_form .field textarea:hover {
   cursor: pointer;
 }
 
@@ -646,7 +651,7 @@ main {
 .main .show-value .value_form input[type="submit"] {
   grid-column: 1 / 3;
   justify-self: center;
-  font-family: 'poppinsbold';
+  font-family: "poppinsbold";
   color: white;
   font-size: 20px;
   width: 300px;
@@ -679,5 +684,88 @@ main {
 }
 
 .custom-shape-divider-top-1634027528 .shape-fill {
-  fill: #5E79C3;
+  fill: #5e79c3;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/img/about_bg.jpg) no-repeat center/cover;
+}
+
+.about__heading {
+  padding: 1.875rem;
+  font-family: "poppinsbold";
+  font-size: 2.5rem;
+  color: white;
+  max-width: 37.5rem;
+  text-align: center;
+}
+
+.mission-vision {
+  margin-top: 5rem;
+  padding: 3.125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  column-gap: 6.25rem;
+}
+
+.mission-vision > div {
+  width: 100%;
+}
+
+.mission-vision img {
+  width: 100%;
+}
+
+.mission-vision h2 {
+  font-family: "poppinsbold";
+  font-size: 2.1875rem;
+}
+
+.mission-vision p {
+  font-family: "poppinslight";
+  line-height: 1.5;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  column-gap: 1.875rem;
+  place-items: center;
+  background-color: #f3f4f1;
+  margin-top: 5rem;
+  padding: 3.125rem;
+}
+
+.team h2 {
+  font-family: "poppinsbold";
+  font-size: 2.5rem;
+}
+
+.team__description p {
+  font-family: "poppinslight";
+  line-height: 1.5;
+}
+
+.team__members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.875rem;
+}
+
+.team__members img {
+  border-radius: 0.625rem;
+  max-width: 28.125rem;
+}
+
+.team__members .member1 {
+  grid-row: 1/3;
+  align-self: center;
 }
