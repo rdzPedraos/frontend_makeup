@@ -7,3 +7,8 @@ menuIcon.addEventListener("click", function () {
   if (window.scrollY != 0) window.scroll({ top: 0, behavior: "smooth" });
   header.classList.toggle("enabled");
 });
+
+$('.header__links a').click( ()=> {
+  body.classList.toggle("no-scroll");
+  header.classList.toggle("enabled");
+});
