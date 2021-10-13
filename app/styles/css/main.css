@@ -775,8 +775,15 @@ main {
   height: 100vh;
   width: 100vw;
   z-index: 10;
-  left: -100vw;
   top: 0;
+}
+
+.transition-container .in-layer .layer {
+  left: -100vw;
+}
+
+.transition-container .out-layer .layer {
+  left: 0;
 }
 
 .transition-container .layer1 {
@@ -791,31 +798,31 @@ main {
   background-color: #d6d9d1;
 }
 
-.transition-container.slide-in .layer1 {
+.transition-container.slide-in .in-layer .layer1 {
   animation: slide 300ms ease-in-out forwards;
 }
 
-.transition-container.slide-in .layer2 {
+.transition-container.slide-in .in-layer .layer2 {
   animation: slide 300ms ease-in-out forwards;
   animation-delay: 150ms;
 }
 
-.transition-container.slide-in .layer3 {
+.transition-container.slide-in .in-layer .layer3 {
   animation: slide 300ms ease-in-out forwards;
   animation-delay: 300ms;
 }
 
-.transition-container.slide-back .layer1 {
+.transition-container.slide-back .out-layer .layer1 {
   animation: slide_back 300ms ease-in-out forwards;
   animation-delay: 300ms;
 }
 
-.transition-container.slide-back .layer2 {
+.transition-container.slide-back .out-layer .layer2 {
   animation: slide_back 300ms ease-in-out forwards;
   animation-delay: 150ms;
 }
 
-.transition-container.slide-back .layer3 {
+.transition-container.slide-back .out-layer .layer3 {
   animation: slide_back 300ms ease-in-out forwards;
 }
 

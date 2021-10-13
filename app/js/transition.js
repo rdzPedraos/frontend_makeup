@@ -8,7 +8,6 @@ window.onload = function () {
 links.forEach((link) => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
-        transitionContainer.classList.remove("slide-back");
         transitionContainer.classList.add("slide-in");
         console.log(e);
         setTimeout(() => {
