@@ -39,6 +39,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   width: 100vw;
   height: 100px;
@@ -81,7 +85,6 @@ body.no-scroll {
 
 .header__links a {
   text-transform: uppercase;
-  text-decoration: none;
   font-family: "poppinsregular";
   font-size: 1.5625rem;
   color: white;
@@ -170,12 +173,11 @@ body.no-scroll {
 .presentation {
   background-color: #f3f4f1;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 100px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1rem;
   place-items: center;
-  overflow: hidden;
 }
 
 .presentation__container {
@@ -187,8 +189,7 @@ body.no-scroll {
   font-family: Times, "Times New Roman";
   font-size: clamp(2rem, 9vw, 9rem);
   font-weight: 400;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .presentation__description {
@@ -286,7 +287,6 @@ body.no-scroll {
   font-family: "poppinslight";
   font-size: 1.5625rem;
   color: #ed7c2e;
-  text-decoration: none;
 }
 
 .presentation__buy span {
@@ -466,7 +466,6 @@ body.no-scroll {
 }
 
 main {
-  width: 100%;
   background: white;
 }
 
@@ -474,9 +473,9 @@ main {
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  padding: 70px 0;
-  font-family: "linotte-regular";
-  color: white;
+  padding: 10px 0;
+  font-family: "poppinsregular";
+  color: black;
 }
 
 .container_contact_us .main {
@@ -485,10 +484,10 @@ main {
 }
 
 .container_contact_us .main h2 {
-  margin: 0;
+  letter-spacing: 1.5px;
   text-align: center;
   font-family: "poppinsbold";
-  letter-spacing: 5px;
+  font-size: 1.875rem;
 }
 
 .container_contact_us .main p {
@@ -509,6 +508,8 @@ main {
   transition: background 0.2s;
   border-radius: 20px;
   text-align: center;
+  background-color: white;
+  color: black;
 }
 
 .container_contact_us .main .icons .icon-i i {
@@ -520,7 +521,6 @@ main {
 }
 
 .container_contact_us .main .icons .icon-i:hover {
-  background: #f3f4f1;
   color: #5e79c3;
   cursor: pointer;
   transition: all 0.2;
@@ -666,25 +666,25 @@ main {
   background: #1c3272;
 }
 
-.custom-shape-divider-top-1634027528 {
+.custom-shape-divider-top-1634083700 {
   position: absolute;
-  top: 0;
+  top: 6.25rem;
   left: 0;
+  width: 100%;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-top-1634027528 svg {
+.custom-shape-divider-top-1634083700 svg {
   position: relative;
   display: block;
-  width: calc(244% + 1.3px);
+  width: calc(100% + 1.3px);
   height: 500px;
-  transform: rotateY(180deg);
 }
 
-.custom-shape-divider-top-1634027528 .shape-fill {
-  fill: #5e79c3;
+.custom-shape-divider-top-1634083700 .shape-fill {
+  fill: #f3f4f1;
 }
 
 .about {
@@ -768,4 +768,71 @@ main {
 .team__members .member1 {
   grid-row: 1/3;
   align-self: center;
+}
+
+.transition-container .layer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  left: -100vw;
+  top: 0;
+}
+
+.transition-container .layer1 {
+  background-color: #f3f4f1;
+}
+
+.transition-container .layer2 {
+  background-color: #e7eae5;
+}
+
+.transition-container .layer3 {
+  background-color: #d6d9d1;
+}
+
+.transition-container.slide-in .layer1 {
+  animation: slide 300ms ease-in-out forwards;
+}
+
+.transition-container.slide-in .layer2 {
+  animation: slide 300ms ease-in-out forwards;
+  animation-delay: 150ms;
+}
+
+.transition-container.slide-in .layer3 {
+  animation: slide 300ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+
+.transition-container.slide-back .layer1 {
+  animation: slide_back 300ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+
+.transition-container.slide-back .layer2 {
+  animation: slide_back 300ms ease-in-out forwards;
+  animation-delay: 150ms;
+}
+
+.transition-container.slide-back .layer3 {
+  animation: slide_back 300ms ease-in-out forwards;
+}
+
+@keyframes slide {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide_back {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100vw;
+  }
 }

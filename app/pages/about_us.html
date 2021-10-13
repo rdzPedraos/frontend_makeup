@@ -18,14 +18,14 @@
   <body>
     <header class="header size-wrapper">
       <nav class="header__nav">
-        <a href="index.html" class="header__logo btn">
+        <a href="index.html" class="header__logo btn active-link">
           True Beauty.
         </a>
 
         <div class="header__links hide-mobile">
-          <a href="about_us.html">Acerca de nosotros</a>
-          <a href="services.html">Servicios</a>
-          <a href="contact_us.html">Contáctanos</a>
+          <a href="#">Acerca de nosotros</a>
+          <a href="services.html" class="active-link">Servicios</a>
+          <a href="contact_us.html" class="active-link">Contáctanos</a>
         </div>
 
         <a href="#" class="header__mobile-menu hide-desktop" id="headerMenu">
@@ -36,6 +36,11 @@
       </nav>
     </header>
     <main>
+      <div class="transition-container" id="transitionContainer">
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+      </div>
       <section class="about size-wrapper">
         <div class="about__heading">
           Que tus acciones sean igual de perfectas a tu maquillaje.
@@ -92,5 +97,6 @@
         </div>
       </section>
     </main>
+    <script src="../js/transition.js"></script>
   </body>
 </html>

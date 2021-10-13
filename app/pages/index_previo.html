@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+    <link rel="stylesheet" href="../libraries/normalize/normalize.css" />
+    <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../styles/css/main.css" />
+</head>
+<body>
+    <header class="header size-wrapper">
+        <nav class="header__nav">
+          <div class="header__logo btn" value="home" is_here="true">True Beauty.</div>
+  
+          <div class="header__links hide-mobile">
+            <a href="#" class="btn" value="about_us" is_here="false">Acerca de nosotros</a>
+            <a href="#" class="btn" value="services" is_here="false">Servicios</a>
+            <a href="#" class="btn" value="contact_us" is_here="false">Contáctanos</a>
+          </div>
+  
+          <a href="#" class="header__mobile-menu hide-desktop" id="headerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </nav>
+    </header>
+
+    <div class="pages">
+        <iframe src="home.html" style="min-height:calc(100vh - 104px); width:100%; border:0;"></iframe>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script>
+        $(".btn").click( function(e){
+            let btn = e.target;
+            $('.pages').remove('transition');
+            if( btn.getAttribute('is_here') == 'false' ){
+
+                let start = Date.now();
+                jQuery('iframe').css('opacity','0');
+                let timer = setInterval(function() {
+                    // ¿Cuánto tiempo pasó desde el principio?
+                    let timePassed = Date.now() - start;
+                    if ( timePassed > 500 ) clearInterval(timer);
+                    else jQuery('iframe').css('opacity', timePassed/500);
+                }, 20); // cambiar en 2px cada 20ms, aproximadamente 50 frames por segundo
+
+                $('iframe')[0].src = btn.getAttribute("value")+".html";
+                $('.btn').each(function(val){ $('.btn')[val].setAttribute('is_here', 'false'); })
+                btn.setAttribute('is_here', "true");
+                $('.pages').addClass('transition');
+            }
+        })
+    </script>
+</body>
+</html>

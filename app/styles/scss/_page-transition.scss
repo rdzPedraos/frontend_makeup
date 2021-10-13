@@ -1,0 +1,74 @@
+.transition-container {
+  .layer {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    left: -100vw;
+    top: 0;
+  }
+
+  .layer1 {
+    background-color: $primary_color;
+  }
+
+  .layer2 {
+    background-color: $primary_color_lighter_variant;
+  }
+
+  .layer3 {
+    background-color: $primary_color_darker_variant;
+  }
+
+  &.slide-in {
+    .layer1 {
+      animation: slide 300ms ease-in-out forwards;
+    }
+
+    .layer2 {
+      animation: slide 300ms ease-in-out forwards;
+      animation-delay: 150ms;
+    }
+
+    .layer3 {
+      animation: slide 300ms ease-in-out forwards;
+      animation-delay: 300ms;
+    }
+  }
+
+  &.slide-back {
+    .layer1 {
+      animation: slide_back 300ms ease-in-out forwards;
+      animation-delay: 300ms;
+    }
+
+    .layer2 {
+      animation: slide_back 300ms ease-in-out forwards;
+      animation-delay: 150ms;
+    }
+    
+    .layer3 {
+      animation: slide_back 300ms ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    left: -100vw;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide_back {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100vw;
+  }
+}
