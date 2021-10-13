@@ -1,4 +1,4 @@
-const links = document.querySelectorAll(".header__nav .active-link");
+const links = document.querySelectorAll(".active-link");
 const transitionContainer = document.getElementById("transitionContainer");
 
 window.onload = function () {

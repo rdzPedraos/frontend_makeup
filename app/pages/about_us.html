@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hola</title>
+    <title>True Beauty | Acerca de nosotros</title>
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../libraries/normalize/normalize.css" />
 
@@ -16,7 +17,7 @@
   </head>
 
   <body>
-    <header class="header size-wrapper">
+    <header class="header about-header size-wrapper">
       <nav class="header__nav">
         <a href="index.html" class="header__logo btn active-link">
           True Beauty.
@@ -28,12 +29,17 @@
           <a href="contact_us.html" class="active-link">Contáctanos</a>
         </div>
 
-        <a href="#" class="header__mobile-menu hide-desktop" id="headerMenu">
+        <div class="header__mobile-menu hide-desktop" id="headerMenu">
           <span></span>
           <span></span>
           <span></span>
-        </a>
+        </div>
       </nav>
+      <div class="about">
+        <div class="about__heading">
+          Que tus acciones sean igual de perfectas a tu maquillaje.
+        </div>
+      </div>
     </header>
     <main>
       <div class="transition-container" id="transitionContainer">
@@ -49,11 +55,6 @@
           <div class="layer layer3"></div>
         </div>
       </div>
-      <section class="about size-wrapper">
-        <div class="about__heading">
-          Que tus acciones sean igual de perfectas a tu maquillaje.
-        </div>
-      </section>
       <section class="mission-vision size-wrapper">
         <div class="mission-vision__mission-container">
           <img src="../assets/img/mission.jpg" alt="Mission" />
@@ -106,5 +107,6 @@
       </section>
     </main>
     <script src="../js/transition.js"></script>
+    <script src="../js/menu.js"></script>
   </body>
 </html>
