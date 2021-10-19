@@ -779,15 +779,53 @@ main {
   grid-gap: 1.875rem;
 }
 
-.team__members img {
+.team__members .member {
+  position: relative;
   border-radius: 0.625rem;
   max-width: 100%;
   min-width: 28.125rem;
+  overflow: hidden;
+}
+
+.team__members .content-layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ed7c2e;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-family: "poppinsregular";
+  color: #f3f4f1;
+  padding: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team__members .content-layer p:nth-child(1) {
+  font-family: "poppinsbold";
+  font-size: clamp(1.25rem, 10vw, 2.5rem);
+}
+
+.team__members .member:hover .content-layer {
+  opacity: 1;
+}
+
+.team__members img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .team__members .member1 {
   grid-row: 1/3;
   align-self: center;
+}
+
+.team__members .member2,
+.team__members .member3 {
+  max-height: 20rem;
 }
 
 @media screen and (max-width: 87.4375em) {
