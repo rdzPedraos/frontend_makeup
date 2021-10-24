@@ -1,215 +1,210 @@
 main {
-  background: $white;
+    background: #fbe4e7;
 }
 
 .container_contact_us {
-  position: relative;
-  z-index: 2;
-  min-height: 100vh;
-  padding: 10px 0;
-  font-family: "poppinsregular";
-  color: $black;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    padding: 10px 0;
+    font-family: "poppinsregular";
+    color: $black;
 
-  .main {
-    max-width: 700px;
-    margin: auto;
+    .main {
+        max-width: 700px;
+        margin: auto;
 
-    h2 {
-      letter-spacing: 1.5px;
-      text-align: center;
-      font: {
-        family: "poppinsbold";
-        size: 30/16 + rem;
-      }
-    }
-
-    p {
-      text-align: center;
-      margin: 0;
-    }
-
-    .icons {
-      margin-top: 40px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-
-      .icon-i {
-        width: 100%;
-        padding: 10px;
-        transition: background 0.2s;
-        border-radius: 20px;
-        text-align: center;
-        background-color: $white;
-        color: $black;
-
-        i {
-          font-size: 50px;
+        h2 {
+            letter-spacing: 1.5px;
+            text-align: center;
+            font: {
+                family: "poppinsbold";
+                size: 30/16 + rem;
+            }
         }
+
         p {
-          margin: 5px 0 0 0;
+            text-align: center;
+            margin: 0;
         }
 
-        &:hover {
-          color: $purple;
-          cursor: pointer;
-          transition: all 0.2;
-        }
+        .icons {
+            margin-top: 40px;
 
-        @include breakpoint-down(medium) {
-          grid-column: 1 / 4;
-          width: 80%;
-          margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            .icon-i {
+                width: 100%;
+                padding: 10px;
+                transition: background 0.2s;
+                border-radius: 20px;
+                text-align: center;
+                background-color: $white;
+                color: $black;
+
+                i {
+                    font-size: 50px;
+                }
+                p {
+                    margin: 5px 0 0 0;
+                }
+
+                &:hover {
+                    color: $secondary_color;
+                    cursor: pointer;
+                    transition: all 0.2;
+                }
+
+                @include breakpoint-down(medium) {
+                    grid-column: 1 / 4;
+                    width: 80%;
+                    margin: auto;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .main .show-value {
-  margin-top: 20px;
-  min-height: 500px;
-  max-width: 700px;
-  padding: 8px;
-  border-radius: 20px;
-  background: $purple_dark;
+    margin-top: 20px;
+    min-height: 500px;
+    max-width: 700px;
+    border-radius: 20px;
+    background: $secondary_color;
 
-  @include breakpoint-down(medium) {
-    width: 90vw;
-    margin: 20px auto 0 auto;
-  }
-
-  .value_googlemaps {
-    display: none;
-    height: 500px;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      border-radius: 10px;
-    }
-  }
-
-  .value_form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px 20px;
-
-    background: white;
-    padding: 20px 20px;
-    border-radius: 10px;
-    color: $black;
-
-    h2 {
-      color: $purple_dark;
-      grid-column: 1 / 3;
-      margin: 15px 0 10px 0;
-      letter-spacing: 1px;
+    @include breakpoint-down(medium) {
+        width: 90vw;
+        margin: 20px auto 0 auto;
     }
 
-    .field {
-      grid-column: 1 / 2;
+    .value_googlemaps {
+        display: none;
+        height: 500px;
 
-      @include breakpoint-down(medium) {
-        grid-column: 1 / 3;
-      }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 10px;
+        }
+    }
 
-      label {
-        display: block;
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
+    .value_form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px 20px;
 
-      input,
-      textarea {
-        width: 100%;
-        height: calc(100% - 53px);
-        font-size: 20px;
-        border-radius: 7px;
-        border: 0;
-        outline: 1px solid rgba(0, 0, 0, 0.2);
+        background: white;
+        padding: 25/16 + rem;
+        border-radius: 10px;
+        color: $black;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 
-        padding: 10px 30px 10px 50px;
-
-        &:focus-visible {
-          outline: 2px solid $purple;
-          color: $purple_dark;
-          background: transparent;
-          & ~ i {
-            color: $purple;
-          }
+        h2 {
+            color: $black;
+            grid-column: 1 / 3;
+            margin: 15px 0 10px 0;
+            letter-spacing: 1px;
         }
 
-        &:hover {
-          cursor: pointer;
+        .field {
+            grid-column: 1 / 2;
+
+            @include breakpoint-down(medium) {
+                grid-column: 1 / 3;
+            }
+
+            label {
+                display: block;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                height: calc(100% - 53px);
+                font-size: 20px;
+                border-radius: 7px;
+                border: 0;
+                outline: 1px solid rgba(0, 0, 0, 0.2);
+
+                padding: 10px 30px 10px 50px;
+
+                &:focus-visible {
+                    outline: 2px solid $secondary_color;
+                    color: $secondary_color;
+                    background: transparent;
+                    & ~ i {
+                        color: $secondary_color;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                position: relative;
+                top: -34px;
+                left: 15px;
+                font-size: 20px;
+            }
         }
-      }
 
-      i {
-        position: relative;
-        top: -34px;
-        left: 15px;
-        font-size: 20px;
-      }
+        .msj {
+            grid-column: 2 / 3;
+            grid-row: 2/5;
+
+            textarea {
+                padding: 15px;
+                resize: none;
+            }
+
+            @include breakpoint-down(medium) {
+                grid-column: 1 / 3;
+                grid-row: auto;
+            }
+        }
+
+        input[type="submit"] {
+            grid-column: 1 / 3;
+            justify-self: center;
+            font-family: "poppinsbold";
+            color: $white;
+            font-size: 20px;
+
+            width: 300px;
+            padding: 15px 0;
+            border: 0;
+            border-radius: 10px;
+            background: $secondary_color;
+            cursor: pointer;
+        }
     }
-
-    .msj {
-      grid-column: 2 / 3;
-      grid-row: 2/5;
-
-      textarea {
-        padding: 15px;
-        resize: none;
-        background: #e1e1e1;
-      }
-
-      @include breakpoint-down(medium) {
-        grid-column: 1 / 3;
-        grid-row: auto;
-      }
-    }
-
-    input[type="submit"] {
-      grid-column: 1 / 3;
-      justify-self: center;
-      font-family: "poppinsbold";
-      color: $white;
-      font-size: 20px;
-
-      width: 300px;
-      padding: 15px 0;
-      border: 0;
-      border-radius: 10px;
-      background: $purple;
-
-      cursor: pointer;
-
-      &:hover {
-        background: $purple_dark;
-      }
-    }
-  }
 }
 
 .custom-shape-divider-top-1634083700 {
-  position: absolute;
-  top: 100/16 + rem;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+    position: absolute;
+    top: 100/16 + rem;
+    left: 0;
+    width: 100%;
+    min-width: 1000px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
 
-  svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 500px;
-  }
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 500px;
+    }
 
-  .shape-fill {
-    fill: $primary_color;
-  }
+    .shape-fill {
+        fill: $primary_color;
+    }
 }

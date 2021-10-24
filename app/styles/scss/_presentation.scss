@@ -39,6 +39,7 @@
       width: 100%;
       height: 100%;
       border-radius: 200/16 + rem;
+      object-fit: cover;
     }
 
     div {
@@ -121,9 +122,16 @@
       family: "poppinslight";
       size: $fontLarge;
     }
+
     color: $secondary_color;
+    
     span {
       padding: 10/16 + rem;
+    }
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: translateX(30px);
     }
   }
 
@@ -145,6 +153,12 @@
 
     &__description {
       padding-right: 0;
+    }
+  }
+
+  @include breakpoint-down(small) {
+    &__images {
+      display: none;
     }
   }
 }

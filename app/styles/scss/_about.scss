@@ -1,6 +1,6 @@
 .about-header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../../assets/img/about_bg.jpg) no-repeat center/cover;
+    url(../../assets/img/nosotros/about_bg.jpg) no-repeat center/cover;
   height: 100vh;
 
   .header__nav a {
@@ -65,21 +65,22 @@
 }
 
 .team {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 30/16 + rem;
-  place-items: center;
   background-color: $primary_color;
   padding: 130/16 + rem 50/16 + rem;
 
-  h2 {
-    font: {
-      family: "poppinsbold";
-      size: 40/16 + rem;
-    }
-  }
-
   &__description {
+    margin: 0 auto 70/16 + rem;
+    max-width: 100%;
+    width: 600/16 + rem;
+    text-align: center;
+
+    h2 {
+      font: {
+        family: "poppinsbold";
+        size: clamp(20/16 + rem, 10vw, 70/16 + rem);
+      }
+    }
+
     p {
       font-family: "poppinslight";
       line-height: 1.5;
@@ -88,16 +89,16 @@
 
   &__members {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 30/16 + rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25/16 + rem;
 
     .member {
       position: relative;
       border-radius: 10/16 + rem;
       max-width: 100%;
-      min-width: 450/16 + rem;
+      min-width: 200/16 + rem;
       overflow: hidden;
+      max-height: 400/16 + rem;
     }
 
     .content-layer {
@@ -130,14 +131,14 @@
       object-fit: cover;
     }
 
-    .member1 {
+    .member2,
+    .member3 {
       grid-row: 1/3;
       align-self: center;
     }
 
-    .member2,
     .member3 {
-      max-height: 20rem;
+      grid-column: 3/4;
     }
   }
 
@@ -155,9 +156,21 @@
     }
   }
 
-  @include breakpoint-down(small) {
+  @include breakpoint-down(medium) {
     &__members {
       grid-template-columns: 1fr;
+    }
+
+    .member {
+      max-height: 300/16 + rem;
+    }
+
+    .member1,
+    .member2,
+    .member3,
+    .member4 {
+      grid-column: 1;
+      grid-row: auto;
     }
   }
 }
